@@ -15,7 +15,7 @@ const generateAction = async (req, res) => {
     `https://api-inference.huggingface.co/models/leannes/sd-1-5-leanne`,
     {
       headers: {
-        Authorization: `Bearer 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`,
+        Authorization: `Bearer ${process.env.HF_AUTH_KEY}`,
         "Content-Type": "application/json",
       },
       method: "POST",
